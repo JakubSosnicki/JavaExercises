@@ -1,2 +1,2 @@
 # JavaExercises
-Repo to my Java exercise in Udemy Course
+Repo to my Java exercises in Udemy Course
