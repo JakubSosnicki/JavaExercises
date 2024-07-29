@@ -13,44 +13,48 @@ public class NumberInWord {
     }
 
     public static void printNumberInWordSwitch(int number) {
-        switch (number){
-            case 0 -> System.out.println("ZERO");
-            case 1 -> System.out.println("ONE");
-            case 2 -> System.out.println("TWO");
-            case 3 -> System.out.println("THREE");
-            case 4 -> System.out.println("FOUR");
-            case 5 -> System.out.println("FIVE");
-            case 6 -> System.out.println("SIX");
-            case 7 -> System.out.println("SEVEN");
-            case 8 -> System.out.println("EIGHT");
-            case 9 -> System.out.println("NINE");
-            default -> System.out.println("OTHER");
-        }
+
+        String numberInWord=switch (number){
+            case 0 -> {yield numberInWord="ZERO";}
+            case 1 -> {yield numberInWord="ONE";}
+            case 2 -> {yield numberInWord="TWO";}
+            case 3 -> {yield numberInWord="THREE";}
+            case 4 -> {yield numberInWord="FOUR";}
+            case 5 -> {yield numberInWord="FIVE";}
+            case 6 -> {yield numberInWord="SIX";}
+            case 7 -> {yield numberInWord="SEVEN";}
+            case 8 -> {yield numberInWord="EIGHT";}
+            case 9 -> {yield numberInWord="NINE";}
+            default -> {yield numberInWord="OTHER";}
+        };
+
+        System.out.println(numberInWord);
     }
 
     public static void printNumberInWordIfElse(int number) {
+        String numberInWord="OTHER";
         if(number==0)
-            System.out.println("ZERO");
+            numberInWord="ZERO";
         else if (number==1)
-            System.out.println("ONE");
+            numberInWord="ONE";
         else if (number==2)
-            System.out.println("TWO");
+            numberInWord="TWO";
         else if (number==3)
-            System.out.println("THREE");
+            numberInWord="THREE";
         else if (number==4)
-            System.out.println("FOUR");
+            numberInWord="FOUR";
         else if (number==5)
-            System.out.println("FIVE");
+            numberInWord="FIVE";
         else if (number==6)
-            System.out.println("SIX");
+            numberInWord="SIX";
         else if (number==7)
-            System.out.println("SEVEN");
+            numberInWord="SEVEN";
         else if (number==8)
-            System.out.println("EIGHT");
+            numberInWord="EIGHT";
         else if (number==9)
-            System.out.println("NINE");
-        else
-            System.out.println("OTHER");
+            numberInWord="NINE";
+
+        System.out.println(numberInWord);
     }
 
 }
